@@ -12,3 +12,7 @@ Route::prefix('animal')->group(function () {
     Route::get('/update/{id}', [AnimalController::class, 'updateAnimal'])->name('animal.misAJourAnimal');
     Route::get('/delete/{id}', [AnimalController::class, 'deleteAnimal'])->name('animal.suppresionAnimal');
 });
+
+Route::fallback(function () {
+    return view('errors.not-found');
+});
