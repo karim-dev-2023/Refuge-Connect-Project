@@ -9,7 +9,7 @@
                 animaux</h1>
 
             <div style="display:flex;gap:22px;justify-content:center;flex-wrap:wrap;">
-
+               
                 @forelse ($animals as $animal)
                     <x-animal 
                     :photo="$animal->photo" 
