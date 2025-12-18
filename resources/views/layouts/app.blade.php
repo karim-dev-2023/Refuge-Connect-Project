@@ -12,7 +12,7 @@
     style="margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f4f6f8;color:#0f172a;">
     <div style="min-height:100vh;display:flex;flex-direction:column;">
         @include('partials.header')
-        <main>
+        <main style="height: 90vh;">
 
             @yield('content')
         </main>

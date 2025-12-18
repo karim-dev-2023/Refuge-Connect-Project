@@ -28,7 +28,7 @@ class AnimalController extends Controller
         if (!$item) {
             return "Animal non trouvé";
         }
-        return view('welcome', ["article" => $item]);
+        return view('animal.show', ["item" => $item]);
     }
 
     public function updateAnimal($id)
