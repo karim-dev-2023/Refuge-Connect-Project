@@ -18,14 +18,15 @@
             font-family: 'Poppins', sans-serif;
             background: #f5f8fa;
             color: #0f172a;
+           
         }
     </style>
 </head>
 
 <body>
-    <div style="min-height:100vh;display:flex;flex-direction:column;">
+    <div style="display:flex;flex-direction:column;">
         @include('partials.header')
-        <main style="height: 90vh;background-color: #f5f8fa;">
+        <main style="background-color: #f5f8fa;  height: 82vh;">
 
             @yield('content')
         </main>

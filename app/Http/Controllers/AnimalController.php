@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Animals;
-use Illuminate\Http\Request;
 
 class AnimalController extends Controller
 {
     public function addAnimal()
     {
         // Méthode rapide avec create()
-        Animals::create([
+        $animal = Animals::create([
             'name' => 'Coquillette',
             'species' => 'Chien',
             'age' => 3,
@@ -18,28 +17,38 @@ class AnimalController extends Controller
             'photo' => 'images/animaux/coquillette.png',
         ]);
 
+        if (!$animal) {
+            return view('errors.not-found', ["error" => "Échec de la création de l'animal"]);
+        }
+
         return to_route('home');
     }
 
-    public function showAnimal($id) {
+    public function showAnimal($id)
+    {
         // Récupérer un enregistrement par son identifiant
         $animal = Animals::find($id);
 
         if (!$animal) {
-            return "Animal non trouvé";
+            return view('errors.not-found', ["error" => "Animal non trouvé"]);
         }
+
         return view('animal.show', ["animal" => $animal]);
     }
 
     public function updateAnimal($id)
     {
-        $animal = Animals::findOrFail($id);
+        $animal = Animals::find($id);
+
+        if (!$animal) {
+            return view('errors.not-found', ["error" => "Animal non trouvé"]);
+        }
 
         $animal->update([
             'name' => $animal->name . ' modifié'
         ]);
 
-        return 'Mise à jour effectuée';
+        return to_route('home');
     }
 
     public function deleteAnimal($id)
@@ -47,7 +56,7 @@ class AnimalController extends Controller
         $animal = Animals::find($id);
 
         if (!$animal) {
-            return 'Animal non trouvé';
+            return view('errors.not-found', ["error" => "Animal non trouvé"]);
         }
 
         $animal->delete();
