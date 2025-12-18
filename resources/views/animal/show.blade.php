@@ -9,7 +9,7 @@
             <div style="display: inline-flex;align-items: center;gap: 28px;padding: 18px 26px;border-radius: 10px;">
                 <div
                     style="width: 140px;height: 140px;overflow: hidden;display: flex;align-items: center;justify-content: center;">
-                    <img src="{{ Storage::url($animal->photo) }}" alt="Chien"
+                    <img src="{{ asset($animal->photo) }}" alt="Chien"
                         style="width: 100%; height: 100%; object-fit: cover; display: block;" />
                 </div>
                 <div style="text-align: left; max-width: 520px; font-weight: 700; font-size: 16px;">

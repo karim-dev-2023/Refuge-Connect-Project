@@ -4,7 +4,7 @@
 
         <div style="padding:12px 12px 0;">
             <div style="height:150px;border-radius:12px;overflow:hidden;background:#dbeafe;">
-                <img alt="Bella" src="{{ Storage::url($photo) }}"
+                <img alt="Bella" src="{{ asset($photo) }}"
                     style="width:100%;height:100%;object-fit:cover;display:block;" />
             </div>
         </div>
