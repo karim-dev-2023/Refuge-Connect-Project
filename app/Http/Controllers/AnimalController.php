@@ -23,20 +23,20 @@ class AnimalController extends Controller
 
     public function showAnimal($id) {
         // Récupérer un enregistrement par son identifiant
-        $item = Animals::find($id);
+        $animal = Animals::find($id);
 
-        if (!$item) {
+        if (!$animal) {
             return "Animal non trouvé";
         }
-        return view('animal.show', ["item" => $item]);
+        return view('animal.show', ["animal" => $animal]);
     }
 
     public function updateAnimal($id)
     {
-        $article = Animals::findOrFail($id);
+        $animal = Animals::findOrFail($id);
 
-        $article->update([
-            'name' => $article->name . ' modifié'
+        $animal->update([
+            'name' => $animal->name . ' modifié'
         ]);
 
         return 'Mise à jour effectuée';
@@ -44,13 +44,13 @@ class AnimalController extends Controller
 
     public function deleteAnimal($id)
     {
-        $article = Animals::find($id);
+        $animal = Animals::find($id);
 
-        if (!$article) {
+        if (!$animal) {
             return 'Animal non trouvé';
         }
 
-        $article->delete();
+        $animal->delete();
 
         return to_route('home');
     }
