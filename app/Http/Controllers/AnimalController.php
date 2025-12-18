@@ -18,7 +18,7 @@ class AnimalController extends Controller
             'photo' => 'images/animaux/coquillette.png',
         ]);
 
-        return "Ajout éffectué";
+        return to_route('home');
     }
 
     public function showAnimal($id) {
@@ -52,6 +52,6 @@ class AnimalController extends Controller
 
         $article->delete();
 
-        return 'Suppression effectuée';
+        return to_route('home');
     }
 }

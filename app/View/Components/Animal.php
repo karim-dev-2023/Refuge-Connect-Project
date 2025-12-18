@@ -8,17 +8,19 @@ use Illuminate\View\Component;
 
 class Animal extends Component
 {
-    public $name, $species, $age, $description, $photo;
+    public $id, $name, $species, $age, $description, $photo;
     /**
      * Create a new component instance.
      */
     public function __construct(
+        $id="",
         $name  = "Ia",
         $species = "",
         $age = "",
         $description = "",
         $photo = ""
     ) {
+        $this->id = $id;
         $this->name = $name;
         $this->species = $species;
         $this->age = $age;

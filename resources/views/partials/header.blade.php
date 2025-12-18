@@ -10,7 +10,7 @@
 
                 <div style="display:flex;align-items:center;gap:18px;font-size:13px;">
                     <a href="{{route('home')}}" style="text-decoration:none;color:#111827;font-weight:600;">Accueil</a>
-                    <a href="#" style="text-decoration:none;color:#111827;font-weight:600;">Ajouter un animal</a>
+                    <a href="{{route('animal.add')}}" style="text-decoration:none;color:#111827;font-weight:600;">Ajouter un animal</a>
                 </div>
             </div>
         </div>
