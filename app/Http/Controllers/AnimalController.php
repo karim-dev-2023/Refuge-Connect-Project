@@ -33,7 +33,7 @@ class AnimalController extends Controller
             return view('errors.not-found', ["error" => "Animal non trouvé"]);
         }
 
-        return view('animal.show', ["animal" => $animal]);
+        return view('pages.show', ["animal" => $animal]);
     }
 
     public function updateAnimal($id)

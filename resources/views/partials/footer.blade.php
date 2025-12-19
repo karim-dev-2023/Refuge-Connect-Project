@@ -1,3 +1,3 @@
-  <footer style="text-align:center;margin-top:24px;font-size:11px;background:white; padding: 20px;">
+  <footer class="footer">
       <?php echo date("Y"); ?> - Refuge Connect
   </footer>
