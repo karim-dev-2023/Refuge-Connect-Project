@@ -1,5 +1,5 @@
     <!-- Header -->
-    <header>
+    <header class="header">
 
         <div class="header-container">
             <div class="element-container">

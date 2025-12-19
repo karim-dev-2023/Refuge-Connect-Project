@@ -12,9 +12,9 @@
         <h2 class="animal-card-title">{{$name}}</h2>
         <div class="animal-card-meta">
             <p><span >Espèce:</span> {{$species}} </p>
-            <p><span >Âge:</span> {{$age}}</p>
-            <p class="animal-card-description">
-                {{ $description }}
+            <p><span >Age:</span> {{$age}} ans</p> 
+            <p class="animal-card-description"> 
+                {{Str::limit($description,70)}}
             </p>
         </div>
 
